@@ -1,26 +1,33 @@
-// export const Statistics = ({ label }, { percentage }) => {
-//   return (
-//     <section className="statistics">
-//       <h2 className="title">Upload stats</h2>
+import PropTypes from "prop-types";
+import { StatisticsWrapper } from './StylesStatistics';
+import { randomColor } from './ChangeColor';
 
-//       <ul className="stat-list">
-//         <li className="item">
-//           <span className="label">{label}</span>
-//           <span className="percentage">{percentage}%</span>
-//         </li>
-//         <li className="item">
-//           <span className="label">{label}</span>
-//           <span className="percentage">`{percentage}%`</span>
-//         </li>
-//         <li className="item">
-//           <span className="label">{label}</span>
-//           <span className="percentage">`{percentage}%`</span>
-//         </li>
-//         <li className="item">
-//           <span className="label">{label}</span>
-//           <span className="percentage">`{percentage}%`</span>
-//         </li>
-//       </ul>
-//     </section>
-//   );
-// };
+export const Statistics = ({ title, stats }) => {
+  return (
+    <StatisticsWrapper>
+    <section className="statistics">
+      {title && <h2 className="title">Upload stats</h2>}
+
+      <ul className="stat-list">
+        {stats.map(item => (
+            <li className="item" key={item.id} style={randomColor()}>
+                <span className="label">{item.label}</span>
+                <span className="percentage">{item.percentage}%</span>
+            </li>
+        ))}                 
+      </ul>
+    </section>
+    </StatisticsWrapper>
+  );
+};
+
+
+Statistics.propTypes = {
+  arrayWithShape: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
+};

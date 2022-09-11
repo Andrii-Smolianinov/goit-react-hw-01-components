@@ -24,9 +24,9 @@ export const ProfileWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 354px;
     height: 400px;
-    border: #d3d3d3 solid 1px;
+    border: #d3d3d3 solid 2px;
     background-color: #ffffff;
     align-items: center;
     justify-content: center;
@@ -74,7 +74,11 @@ export const ProfileWrapper = styled.div`
     display: flex;
     margin: 0;
     padding: 0;
-    width: 350px;
+    width: 354px;
+
+    border-right: #d3d3d3 solid 2px;
+    border-left: #d3d3d3 solid 2px;
+    border-bottom: #d3d3d3 solid 2px;
   }
 
   .stats-item {
@@ -82,12 +86,18 @@ export const ProfileWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    border: #d3d3d3 solid 1px;
-    width: 116px;
+    width: 118px;
     height: 80px;
     align-items: center;
     justify-content: flex-start;
     background-color: #f5f4fa;
+
+    :nth-child(1) {
+      border-right: #d3d3d3 solid 2px;
+    }
+    :nth-child(3) {
+      border-left: #d3d3d3 solid 2px;
+    }
   }
 
   .label {

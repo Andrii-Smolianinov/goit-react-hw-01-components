@@ -21,13 +21,12 @@ export const Statistics = ({ title, stats }) => {
   );
 };
 
-
 Statistics.propTypes = {
   arrayWithShape: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      label: PropTypes.string,
-      percentage: PropTypes.number,
+      id: PropTypes.number.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };

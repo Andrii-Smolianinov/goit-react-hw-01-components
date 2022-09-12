@@ -27,20 +27,13 @@ export const TransactionHistory = ({ items }) => {
   );
 };
 
-// TransactionHistory.propTypes = {
-//   type: PropTypes.string.isRequired,
-//   amount: PropTypes.number.isRequired,
-//   currency: PropTypes.string.isRequired,
-//   id: PropTypes.string.isRequired,
-// };
-
 TransactionHistory.propTypes = {
   arrayWithShape: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      type: PropTypes.string,
-      amount: PropTypes.string,
-      currency: PropTypes.string,
+      id: PropTypes.number.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
     })
   ),
 };

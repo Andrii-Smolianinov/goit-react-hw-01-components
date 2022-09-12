@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const TransactionWrapper = styled.div`
+
   .table {
     margin: 65px;
     border-collapse: collapse;

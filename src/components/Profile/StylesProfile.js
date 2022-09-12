@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const ProfileWrapper = styled.div`
   width: 100%;
   height: 100%;
-  padding: 40px;
-  justify-content: center;
+  padding: 65px;
+  justify-content: center; 
   background-color: #dcdcdc;
 
   p {
@@ -15,7 +15,7 @@ export const ProfileWrapper = styled.div`
   .profile {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
   }
 
